@@ -1,9 +1,71 @@
-<html>
-    <head>
-        <title>alvin purnama</title>
-    </head>
-    <body>
-        <h1>belajar javascript</h1>
-        <script src="main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Nilai Mahasiswa</title>
+    <style>
+         body {
+            font-synthesis: Broadway ;
+            background-color: bisque;
+        }
+        .container {
+            background-color: rgb(213, 224, 195);
+        }
+        label{
+            display: block;
+            margin-top: 10px;
+            font-style: Calibri;
+            background-color: rgb(240, 153, 197);
+        }
+        button[type="button"]{
+            background-color: aqua;
+            color: rgb(55, 15, 92);
+        }button[type="reset"]{
+            background-color: rgb(208, 225, 225);
+            color:firebrick;
+        }
+        #hasil {
+            background-color: rgb(174, 168, 168);   
+            padding: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Input Nilai Mahasiswa</h1>
+        <form id="nilaiForm">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required><br>
+
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br>
+
+            <label for="matkul">Mata Kuliah:</label>
+            <select id="matkul" name="matkul" required>
+                <option value="pemrograman komputer">pemrograman komputer</option>
+                <option value="kalkulus">kalkulus</option>
+                <option value="diskrit">diskrit</option>
+                <option value="struktur data dan algiritma">struktur data dan algoritma</option>
+                <option value="arsitektur komputer">arsitektur komputer</option>
+                <option value="sistem oprasi">sistem oprasi</option>
+                <option value="desain perangkat lunak">desain perangkat lunak</option>
+                <option value="pendidikan pancasila">pendidikan pancasila</option>
+                <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            </select><br>
+
+            <label for="nilai">Nilai Akhir:</label>
+            <input type="number" id="nilai" name="nilai" min="0" max="100" required><br>
+
+            <button type="button" onclick="tampil()">TAMPIL</button>
+            <button type="reset">RESET</button>
+        </form>
+        
+        <div id="hasil"></div>
+    </div>
+
+    <script src="uts.js"></script>
+</body>
 </html>
+
